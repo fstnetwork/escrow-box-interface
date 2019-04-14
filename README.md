@@ -23,8 +23,9 @@ Before the FINALISING state, other states must have expiry to avoid the eternal 
 
 ```
     
-[OPEN] --→ [PROPOSING] ------→ [NEGOTIATING] ----→ [FINALISING]
-    ↑           \--→  [CANCELLING] ←--/                 |
-    \---------------------/                             |
-     \--------------------------------------------------/
+[OPEN] -(anyone proposes)-→ [PROPOSING] ---------------(passes the proposal conditions)-------------→ [NEGOTIATING] --(passes the negotiation conditions)-→ [FINALISING]
+  ↑                              |                                                                           |                                                   |
+   \                             \-(anyone cancels or expired)-→  [CANCELLING] ←-(anyone cancels or expired)-/                                                   |
+    \--------------------------------------------------------------------------------------------/                                                               |
+     \-----------------------------------------------------------(finalise)--------------------------------------------------------------------------------------/
 ```
