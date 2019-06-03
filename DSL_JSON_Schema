@@ -1,0 +1,30 @@
+{
+  "roles": {
+    "admin": {
+      "conditions": [{
+        "op": "hasAtLeastOne",
+        "ledger": "ADDRESS" 
+      }],
+      "reservedAddresses": ["ADDRESS", ...]
+    },
+    "foo": {},
+    "bar": {}
+  },
+  "states": {
+    "open": {},
+    "proposing": {},
+    "negotiating": {},
+    "cancelling": {},
+    "finalizing": {}
+  },
+  "actions:" {
+    "propose": {},
+    "negotiate": {},
+    "cancel": {},
+    "finalize": {},
+  },
+  "situations": {
+    "a": {},
+    "b": {}
+  }
+}
